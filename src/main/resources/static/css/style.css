@@ -10,10 +10,17 @@
 }
 
 .join-box {
-	width:250px;
+	width:300px;
+}
+
+.dupBtn {
+	width:70px;
+	height:20px;
+	font-size:12px;
+	background-color:#23c290;
 }
 
 footer {
-	height:60px;
+	height:50px;
 	background-color:#dddddd;
 }
