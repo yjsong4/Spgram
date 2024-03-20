@@ -12,4 +12,5 @@ public interface UserRepository {
 			, @Param("name") String name
 			, @Param("email") String email);
 
+	public int selectCountByUserName(@Param("userName") String userName);
 }

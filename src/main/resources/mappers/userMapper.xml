@@ -21,5 +21,14 @@
 			,#{email}
 		)
 	</insert>
+	
+	<select id="selectCountByUserName" parameterType="String" resultType="int">
+		SELECT
+			count(*)
+		FROM
+			`user`
+		WHERE
+			`userName` = #{userName}
+	</select>
 
 </mapper>

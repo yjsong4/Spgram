@@ -13,14 +13,27 @@
 	width:300px;
 }
 
-.dupBtn {
-	width:70px;
-	height:20px;
+#duplicateBtn {
+	width:74px;
+	height:30px;
+	position:absolute;
+	top:0px;
+	bottom:0px;
+	right:5px;
 	font-size:12px;
-	background-color:#23c290;
+	border-radius: 4px;
+	background-color:#30b68a;
+}
+
+.check {
+	font-size:11px;
+}
+
+#joinBtn {
+	margin-top:90px;
+	background-color:#30b68a;
 }
 
 footer {
-	height:50px;
-	background-color:#dddddd;
+	font-size:13px;
 }
