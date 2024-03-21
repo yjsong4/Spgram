@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,7 +14,7 @@
 	<div id="wrap">
 	
 		<header class="d-flex justify-content-center">
-			<h1 class="mt-5 text-secondary font-weight-bold">Join Spgram!</h1>
+			<h1 class="mt-5 text-secondary font-weight-bold">Create Account</h1>
 		</header>
 		
 		<section class="contents d-flex justify-content-center">
@@ -48,6 +49,21 @@
 <script>
 	$(document).ready(function() {
 		
+		// 중복 체크 여부 저장 변수
+		var isDuplicateCheck = false;
+		
+		// 아이디 중복 여부 저장 변수
+		var isDuplicateId = true;
+		
+		$("#userNameInput").on("input", function() {
+			// 중복확인 과정을 리셋한다.
+			isDuplicateCheck = false;
+			isDuplicateId = true;
+			
+			$("#userNameWarning").addClass("d-none");
+			$("#userNameInfo").addClass("d-none");
+		});
+		
 		$("#duplicateBtn").on("click", function() {
 			
 			let userName = $("#userNameInput").val();
@@ -62,6 +78,12 @@
 				, url:"/user/duplicate-userName"
 				, data:{"userName":userName}
 				, success:function(data) {
+					
+					// 중복 체크 완료
+					isDuplicateCheck = true;
+					
+					// 중복이 안되면 true값 저장
+					isDuplicateId = data.isDuplicate;
 					
 					if(data.isDuplicate) {
 						$("#userNameWarning").removeClass("d-none");
@@ -99,6 +121,19 @@
 				alert("아이디를 입력하세요.");
 				return;
 			}
+			
+			// 중복체크 여부 유효성 검사
+			if(!isDuplicateCheck) {
+				alert("아이디 중복체크를 진행해주세요.");
+				return;
+			}
+			
+			// 중복 여부 유효성 검사
+			if(isDuplicateId) {
+				alert("아이디가 중복되었습니다.");
+				return;
+			}
+			
 			if(password == "") {
 				alert("비밀번호를 입력하세요.");
 				return;
