@@ -5,8 +5,17 @@
 	margin:0 auto;
 }
 
+.logo {
+	width:100px;
+	height:100px;
+}
+
 .contents {
 	height:500px;
+}
+
+.loginBox {
+	height:300px;
 }
 
 .join-box {
@@ -32,6 +41,19 @@
 #joinBtn {
 	margin-top:90px;
 	background-color:#30b68a;
+}
+
+#loginBtn {
+	margin-top:70px;
+	background-color:#30b68a;
+}
+
+a:link {
+	color:navy;
+	font-size:12px;
+}
+a:visited {
+	color:#30b68a;
 }
 
 footer {

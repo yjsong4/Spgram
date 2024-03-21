@@ -12,11 +12,30 @@
 	
 	<div id="wrap">
 	
+		<header class="text-center">
+			<div>
+				<h1 class="mt-5 mb-0">SPgram</h1>
+				<img class="img-fluid logo" src="https://images.template.net/76869/Free-Instagram-Glyph-Vector.jpeg">
+			</div>
+		</header>
+		
+		<section class="loginBox d-flex justify-content-center align-items-center">
+			<div>
+				<input type="text" placeholder="Username" class="form-control" id="userNameInput">
+				<input type="password" placeholder="••••" class="form-control mt-4" id="passwordInput">
+				<button type="button" class="btn btn-block text-white" id="loginBtn">LOGIN</button>
+				<div class="text-center"><a href="#">아직 계정이 없으신가요?</a></div>
+			</div>
+		</section>
+
+		<hr class="my-2 mt-5">
+		<footer class="d-flex justify-content-center align-items-center text-italic font-italic">
+			<div>
+				Copyright ©2024 Spgram All rights reserved.
+			</div>			
+		</footer>
 	
 	</div>
-
-
-
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
