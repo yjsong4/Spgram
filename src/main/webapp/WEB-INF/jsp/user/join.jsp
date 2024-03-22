@@ -13,12 +13,11 @@
 
 	<div id="wrap">
 	
-		<header class="d-flex justify-content-center">
-			<h1 class="mt-5 text-secondary font-weight-bold">Create Account</h1>
-		</header>
+		<c:import url="/WEB-INF/jsp/include/header.jsp" />
 		
-		<section class="contents d-flex justify-content-center">
-			<div class="join-box my-5">
+		<section class="contents d-flex align-items-center justify-content-center">
+			<div class="join-box my-5 pt-5">
+				<h4 class="text-secondary text-center mb-3">Create Account</h4>
 				<input type="text" placeholder="이메일주소" class="form-control" id="emailInput">
 				<input type="text" placeholder="성명" class="form-control mt-4" id="nameInput">
 				
@@ -29,17 +28,12 @@
 				<div class="check text-danger d-none" id="userNameWarning">중복된 userName 입니다.</div>
 				<div class="check text-info d-none" id="userNameInfo">사용 가능한 userName 입니다.</div>
 				
-				<input type="text" placeholder="비밀번호" class="form-control mt-4" id="passwordInput">
+				<input type="password" placeholder="비밀번호" class="form-control mt-4" id="passwordInput">
 				<button type="button" class="btn btn-secondary btn-block" id="joinBtn">가입하기</button>
 			</div>
 		</section>
 		
-		<hr class="my-2">
-		<footer class="d-flex justify-content-center align-items-center text-italic font-italic">
-			<div>
-				Copyright ©2024 Spgram All rights reserved.
-			</div>			
-		</footer>
+		<c:import url="/WEB-INF/jsp/include/footer.jsp" />
 	
 	</div>
 

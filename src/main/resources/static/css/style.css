@@ -1,21 +1,17 @@
 @charset "UTF-8";
 
 #wrap{
-	width:350px;
+	width:400px;
 	margin:0 auto;
 }
 
-.logo {
-	width:100px;
-	height:100px;
+.logoImage {
+	width:200px;
+	height:200px;
 }
 
 .contents {
 	height:500px;
-}
-
-.loginBox {
-	height:300px;
 }
 
 .join-box {
@@ -44,7 +40,7 @@
 }
 
 #loginBtn {
-	margin-top:70px;
+	margin-top:50px;
 	background-color:#30b68a;
 }
 

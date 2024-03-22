@@ -3,6 +3,8 @@ package com.syj.spgram.user.repository;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import com.syj.spgram.user.domain.User;
+
 @Mapper
 public interface UserRepository {
 	
@@ -13,4 +15,9 @@ public interface UserRepository {
 			, @Param("email") String email);
 
 	public int selectCountByUserName(@Param("userName") String userName);
+	
+	public User selectUserByUserNameAndPassword(
+			@Param("userName") String userName
+			, @Param("password") String password);
+
 }
