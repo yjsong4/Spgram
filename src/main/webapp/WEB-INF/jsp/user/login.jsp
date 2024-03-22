@@ -18,9 +18,11 @@
 		<section class="loginBox d-flex justify-content-center align-items-center">
 			<div class="py-4">
 				<img class="img-fluid logoImage" src="https://images.template.net/76869/Free-Instagram-Glyph-Vector.jpeg">
-				<input type="text" placeholder="Username" class="form-control" id="userNameInput">
-				<input type="password" placeholder="••••" class="form-control mt-4" id="passwordInput">
-				<button type="button" class="btn btn-block text-white" id="loginBtn">LOGIN</button>
+				<form id="loginForm">
+					<input type="text" placeholder="Username" class="form-control" id="userNameInput">
+					<input type="password" placeholder="••••" class="form-control mt-4" id="passwordInput">
+					<button type="submit" class="btn btn-block text-white" id="loginBtn">LOGIN</button>
+				</form>
 				<div class="text-center"><a href="#">아직 계정이 없으신가요?</a></div>
 			</div>
 		</section>
@@ -34,7 +36,12 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
 <script>
 	$(document).ready(function() {
-		$("#loginBtn").on("click", function() {
+		
+		$("#loginForm").on("submit", function(e) {
+			
+			// submit 이벤트가 가진 고유의 기능을 취소
+			e.preventDefault();
+			
 			let userName = $("#userNameInput").val();
 			let password = $("#passwordInput").val();
 			
@@ -53,7 +60,7 @@
 				, data:{"userName":userName, "password":password}
 				, success:function(data) {
 					if(data.result == "success") {
-						location.href = "/post/list-view";
+						location.href = "/post/feed-view";
 					} else {
 						alert("사용자이름과 비밀번호를 확인해주세요.");
 					}
