@@ -10,9 +10,7 @@
 <link rel="stylesheet" href="/static/css/style.css" type="text/css">
 </head>
 <body>
-
 	<div id="wrap">
-	
 		<c:import url="/WEB-INF/jsp/include/header.jsp" />
 		
 		<section class="contents d-flex align-items-center justify-content-center">
@@ -34,7 +32,6 @@
 		</section>
 		
 		<c:import url="/WEB-INF/jsp/include/footer.jsp" />
-	
 	</div>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>

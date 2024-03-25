@@ -17,6 +17,16 @@
 .join-box {
 	width:300px;
 }
+.photo-box {
+	height:230px;	
+}
+.text-box {
+	height:270px;
+}
+
+.delete-box{
+	height:400px;
+}
 
 #duplicateBtn {
 	width:74px;
@@ -51,6 +61,40 @@ a:link {
 a:visited {
 	color:#30b68a;
 }
+
+.plusDeleteBtn {
+	width:370px;
+	height:34px;
+}
+
+.imgBox {
+	height:350px;
+}
+
+.coverImg {
+  width:350px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.socialBtn {
+	position:absolute;
+	top:516px;
+	left:547px;
+}
+
+.commentBox {
+	height:34px;
+}
+
+.feed-bi {
+	font-size:20px;
+}
+
+.input-bi {
+	font-size:66px;
+}
+
 
 footer {
 	font-size:13px;

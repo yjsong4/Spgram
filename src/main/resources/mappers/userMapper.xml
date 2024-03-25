@@ -41,7 +41,6 @@
 			, `email`
 			, `createdAt`
 			, `updatedAt`
-		)
 		FROM
 			`user`
 		WHERE
