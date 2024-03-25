@@ -25,7 +25,7 @@ public class PostRestController {
 			, @RequestParam(value="imageFile", required=false) MultipartFile file
 			, HttpSession session) {
 		
-		int userId = (Integer)session.getAttribute("userId");
+		int userId = (Integer)session.getAttribute("id");
 		
 		int count = postService.addPost(userId, contents, file);
 		

@@ -1,11 +1,13 @@
 package com.syj.spgram.post.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import com.syj.spgram.common.FileManager;
 import com.syj.spgram.post.repository.PostRepository;
 
+@Service
 public class PostService {
 	
 	@Autowired

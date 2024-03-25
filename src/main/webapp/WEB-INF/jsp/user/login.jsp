@@ -15,7 +15,7 @@
 
 		<section class="loginBox d-flex justify-content-center align-items-center">
 			<div class="py-4">
-				<img class="img-fluid logoImage" src="https://images.template.net/76869/Free-Instagram-Glyph-Vector.jpeg">
+				<img class="img-fluid logo-image" src="https://images.template.net/76869/Free-Instagram-Glyph-Vector.jpeg">
 				<form id="loginForm">
 					<input type="text" placeholder="Username" class="form-control" id="userNameInput">
 					<input type="password" placeholder="••••" class="form-control mt-4" id="passwordInput">
