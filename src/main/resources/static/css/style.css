@@ -78,9 +78,7 @@ a:visited {
 }
 
 .socialBtn {
-	position:absolute;
-	top:516px;
-	left:547px;
+	margin-left:25px;
 }
 
 .commentBox {
