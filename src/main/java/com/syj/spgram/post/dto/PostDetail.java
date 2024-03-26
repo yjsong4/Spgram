@@ -9,7 +9,7 @@ public class PostDetail {
 	private String imagePath;
 	
 	private int userId;
-	private String userLoginId;
+	private String userName;
 	
 	public int getId() {
 		return id;
@@ -35,11 +35,11 @@ public class PostDetail {
 	public void setUserId(int userId) {
 		this.userId = userId;
 	}
-	public String getUserLoginId() {
-		return userLoginId;
+	public String getUserName() {
+		return userName;
 	}
-	public void setUserLoginId(String userLoginId) {
-		this.userLoginId = userLoginId;
+	public void setUserName(String userName) {
+		this.userName = userName;
 	}
 	
 }

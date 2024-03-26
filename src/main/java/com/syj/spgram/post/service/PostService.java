@@ -50,7 +50,7 @@ public class PostService {
 			postDetail.setContents(post.getContents());
 			postDetail.setImagePath(post.getImagePath());
 			postDetail.setUserId(post.getUserId());
-			postDetail.setUserLoginId(user.getUserName());
+			postDetail.setUserName(user.getUserName());
 			
 			postDetailList.add(postDetail);
 		

@@ -36,7 +36,9 @@
 					<a href="#" class="mt-2"><i class="feed-bi bi-chevron-right"></i></a>
 				</div>
 				
-				<div>
+				<div class="d-flex align-items-center">
+					<div class="mt-2 ml-3">userName</div>
+					<div class="mt-2 ml-3">contents</div>
 				</div>
 			</div>
 		</section>

@@ -24,16 +24,19 @@
 						
 						<div class="d-flex justify-content-center align-items-top">
 							<img class="cover-img" src="${post.imagePath }">
-							<div>${post.userLoginId }</div>
-							<div>${post.contents }</div>
 						</div>
 					
-						<div class="ml-2 mt-1">
+						<div class="ml-3 mt-1">
 							<div>
 								<i class="feed-bi bi-heart mr-1"></i>
 								<i class="feed-bi bi-chat mr-1"></i>
 								<i class="feed-bi bi-download"></i>
 							</div>
+						</div>
+						<div class="ml-3">128likes</div>
+						<div class="d-flex align-items-center">
+							<div class="ml-3">${post.userName }</div>
+							<div class="ml-3">${post.contents }</div>
 						</div>
 						<div class="d-flex justify-content-center px-2">
 							<input type="text" placeholder="Add a comment" class="mt-2 mr-2 form-control font-italic">
