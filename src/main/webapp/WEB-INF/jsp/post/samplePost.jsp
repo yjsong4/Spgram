@@ -13,36 +13,33 @@
 <body>
 	<div id="wrap">
 		<c:import url="/WEB-INF/jsp/include/header.jsp" />
-		
-			<section class="contents">
-				<c:forEach var="post" items="${postList }">
-					<div class="mt-5 p-3 border rounded">
-						<div class="plus-delete-btn d-flex justify-content-end">
-							<i class="feed-bi bi-plus-lg mr-1"></i>
-							<i class="feed-bi bi-x-lg"></i>
-						</div>
-						
-						<div class="d-flex justify-content-center align-items-top">
-							<img class="cover-img" src="${post.imagePath }">
-							<div>${post.userLoginId }</div>
-							<div>${post.contents }</div>
-						</div>
-					
-						<div class="ml-2 mt-1">
-							<div>
-								<i class="feed-bi bi-heart mr-1"></i>
-								<i class="feed-bi bi-chat mr-1"></i>
-								<i class="feed-bi bi-download"></i>
-							</div>
-						</div>
-						<div class="d-flex justify-content-center px-2">
-							<input type="text" placeholder="Add a comment" class="mt-2 mr-2 form-control font-italic">
-							<a href="#" class="mt-2"><i class="feed-bi bi-chevron-right"></i></a>
-						</div>
+		<section class="contents">
+			<div class="mt-5 p-3 border rounded">
+				<div class="plus-delete-btn d-flex justify-content-end">
+					<a href="#"><i class="feed-bi bi-plus-lg mr-1"></i></a>
+					<a href="#"><i class="feed-bi bi-x-lg"></i></a>
+				</div>
+				
+				<div class="d-flex justify-content-center align-items-top">
+					<img class="cover-img" src="https://media.pitchfork.com/photos/65f1fd21a52ec7e13d476691/master/w_1600,c_limit/Dua-Lipa-Radical-Optimism.jpg">
+				</div>
+				
+				<div class="ml-2 mt-1">
+					<div>
+						<i class="feed-bi bi-heart mr-1"></i>
+						<i class="feed-bi bi-chat mr-1"></i>
+						<i class="feed-bi bi-download"></i>
 					</div>
-				</c:forEach>
-			</section>
-			
+				</div>
+				<div class="d-flex justify-content-center px-2">
+					<input type="text" placeholder="Add a comment" class="mt-2 mr-2 form-control font-italic">
+					<a href="#" class="mt-2"><i class="feed-bi bi-chevron-right"></i></a>
+				</div>
+				
+				<div>
+				</div>
+			</div>
+		</section>
 		<c:import url="/WEB-INF/jsp/include/footer.jsp" />
 	</div>
 

@@ -20,5 +20,35 @@
 			, #{imagePath}
 		)
 	</insert>
+	
+	<select id="selectPost" parameterType="int"
+	resultType="com.syj.spgram.post.domain.Post">
+		SELECT
+			`id`
+			, `userId`
+			, `contents`
+			, `imagePath`
+			, `createdAt`
+			, `updatedAt`
+		FROM
+		 	`post`
+		WHERE
+			`id` = #{id}
+	</select>
+	
+	<select id="selectPostList"
+	resultType="com.syj.spgram.post.domain.Post">
+		SELECT
+			`id`
+			, `userId`
+			, `contents`
+			, `imagePath`
+			, `createdAt`
+			, `updatedAt`
+		FROM
+		 	`post`
+		ORDER BY
+			`id` DESC
+	</select>
 
 </mapper>

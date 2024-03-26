@@ -20,7 +20,7 @@
 			</div>
 			<div class="d-flex justify-content-center">
 				<input type="file" id="fileInput" style="display: none;">
-				<input type="button" class="btn btn-outline-light btn-sm upload-btn" value="upload" onclick="document.getElementById('fileInput').click();">
+				<input type="button" class="btn btn-outline-success btn-sm upload-btn" value="upload" onclick="document.getElementById('fileInput').click();">
 			</div>
 			<hr align="center" width="85%">
 			<div class="text-box m-4">
@@ -42,11 +42,17 @@
 		
 		$("#saveBtn").on("click", function() {
 			let contents = $("#contentsInput").val();
-			let file = $("#fileInput").val();
+			let file = $("#fileInput")[0].files[0];
 			
 			if(contents == "") {
 				alert("내용을 입력하세요");
 				return ;
+			}
+			
+			// 파일 선택에 대한 유효성 검사
+			if(file == null) {
+				alert("이미지를 업로드 해주세요.");
+				return;
 			}
 			
 			let formData = new FormData();
@@ -62,7 +68,7 @@
 				, contentType:false
 				, success:function(data) {
 					if(data.result == "success") {
-						location.href = "/post/feed-view";
+						location.href = "/post/list-view";
 					} else {
 						alert("게시글 작성 실패");
 					}

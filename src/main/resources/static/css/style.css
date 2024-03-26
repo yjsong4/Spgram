@@ -10,10 +10,6 @@
 	height:200px;
 }
 
-.contents {
-	height:500px;
-}
-
 .join-box {
 	width:300px;
 }
@@ -87,4 +83,8 @@ a:visited {
 
 footer {
 	font-size:13px;
+}
+
+.footerHr {
+	margin-top:60px;
 }

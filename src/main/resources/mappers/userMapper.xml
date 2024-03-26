@@ -47,5 +47,21 @@
 			`userName` = #{userName}
 			AND `password` = #{password}
 	</select>
+	
+	<select id="selectUser" parameterType="int"
+	resultType="com.syj.spgram.user.domain.User">
+		SELECT
+			`id`
+			, `userName`
+			, `password`
+			, `name`
+			, `email`
+			, `createdAt`
+			, `updatedAt`
+		FROM
+			`user`
+		WHERE
+			`id` = #{id}
+	</select>
 
 </mapper>
