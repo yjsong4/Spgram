@@ -1,4 +1,4 @@
-package com.syj.spgram.post;
+package com.syj.spgram.comment;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -7,31 +7,31 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.multipart.MultipartFile;
 
-import com.syj.spgram.post.service.PostService;
+import com.syj.spgram.comment.domain.Comment;
+import com.syj.spgram.comment.service.CommentService;
 
 import jakarta.servlet.http.HttpSession;
 
 @RestController
-public class PostRestController {
-	
+public class CommentRestController {
+
 	@Autowired
-	private PostService postService;
+	private CommentService commentService;
 	
-	@PostMapping("/post/create")
-	public Map<String, String> createPost(
-			@RequestParam("contents") String contents
-			, @RequestParam(value="imageFile", required=false) MultipartFile file
+	@PostMapping("/post/comment")
+	public Map<String, String> CommentPost(
+			@RequestParam("postId") int postId
+			, @RequestParam("contents") String contents
 			, HttpSession session) {
 		
 		int userId = (Integer)session.getAttribute("id");
 		
-		int count = postService.addPost(userId, contents, file);
+		Comment comment = commentService.addComment(userId, postId, contents);
 		
 		Map<String, String> resultMap = new HashMap<>();
 		
-		if(count == 1) {
+		if(comment != null) {
 			resultMap.put("result", "success");
 		} else {
 			resultMap.put("result", "fail");

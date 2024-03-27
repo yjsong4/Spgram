@@ -28,7 +28,7 @@
 					
 						<div class="ml-3 mt-1">
 							<div>
-								<i class="feed-bi bi-heart mr-1"></i>
+								<i class="feed-bi bi-heart mr-1 like-icon" data-post-id="${post.id }"></i>
 								<i class="feed-bi bi-chat mr-1"></i>
 								<i class="feed-bi bi-download"></i>
 							</div>
@@ -52,6 +52,35 @@
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js" integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+" crossorigin="anonymous"></script>
+<script>
+	$(document).ready(function() {
+		
+		$(".like-icon").on("click", function() {
+			
+			let id = $(this).data("post-id");
+			
+			$.ajax({
+				type:"post"
+				, url:"/post/like"
+				, data:{"id":id}
+				, success:function(data) {
+					if(data.result == "success") {
+						location.href = "/post/feed-view";
+					} else {
+						alert("ㅜㅜ");
+					}
+				}
+				, error:function() {
+					alert("에러");
+				}
+			});
+			
+		});
+		
+	});
+
+</script>
+
 
 </body>
 </html>

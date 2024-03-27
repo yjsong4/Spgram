@@ -16,7 +16,7 @@
 		<section class="contents border rounded mt-5">
 			<div class="photo-box d-flex justify-content-center align-items-center mt-5">		
 				<i class="input-bi bi-camera mr-4"></i>
-				<i class="input-bi bi-image"></i>
+				<i class="input-bi bi-image" id="cameraId"></i>
 			</div>
 			<div class="d-flex justify-content-center">
 				<input type="file" id="fileInput" style="display: none;">
@@ -39,6 +39,10 @@
 
 <script>
 	$(document).ready(function() {
+		
+		$("#cameraId").on("click", function() {
+			$("#fileInput").click();
+		});
 		
 		$("#saveBtn").on("click", function() {
 			let contents = $("#contentsInput").val();

@@ -53,9 +53,9 @@ public class PostService {
 			postDetail.setUserName(user.getUserName());
 			
 			postDetailList.add(postDetail);
-		
 		}
 		
 		return postDetailList;
 	}
+	
 }
